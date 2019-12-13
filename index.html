@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <title>new project</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Add new</button>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="name" placeholder="Username.." class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Profile</label>
+                                <input type="text" id="profile" placeholder="Profile" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>post</label>
+                                <input type="text" id="post" placeholder="post" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea id="de" cols="10" rows="3" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-info form-control">Add new</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6" id="result"></div>
+            <div class="col-3"></div>
+        </div>
+
+    </div>
+    <script src="js/new.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDIoO3mKfhMtCHWvvSuMpHcTmqFUKSbjeo",
+    authDomain: "new-project-8352a.firebaseapp.com",
+    databaseURL: "https://new-project-8352a.firebaseio.com",
+    projectId: "new-project-8352a",
+    storageBucket: "new-project-8352a.appspot.com",
+    messagingSenderId: "350749183967",
+    appId: "1:350749183967:web:b1537a8112e2a8faf4be6a",
+    measurementId: "G-BXM2EY9R74"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var database = firebase.firestore()
+</script>
+</body>
+</html>
